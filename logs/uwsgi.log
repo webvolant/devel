@@ -1,0 +1,29 @@
+Fri May  2 11:04:44 2014 - *** Starting uWSGI 1.4.9-debian (64bit) on [Fri May  2 11:04:44 2014] ***
+Fri May  2 11:04:44 2014 - compiled with version: 4.7.2 on 07 October 2013 15:29:40
+Fri May  2 11:04:44 2014 - os: Linux-3.2.0-4-amd64 #1 SMP Debian 3.2.54-2
+Fri May  2 11:04:44 2014 - nodename: sulfur
+Fri May  2 11:04:44 2014 - machine: x86_64
+Fri May  2 11:04:44 2014 - clock source: unix
+Fri May  2 11:04:44 2014 - detected number of CPU cores: 16
+Fri May  2 11:04:44 2014 - current working directory: /var/www/home/hosting_volant247/projects/devel
+Fri May  2 11:04:44 2014 - writing pidfile to /var/run/uwsgi/devel.volant247.pid
+Fri May  2 11:04:44 2014 - detected binary path: /usr/bin/uwsgi-core
+Fri May  2 11:04:44 2014 - your processes number limit is 274018
+Fri May  2 11:04:44 2014 - your memory page size is 4096 bytes
+Fri May  2 11:04:44 2014 - detected max file descriptor number: 1024
+Fri May  2 11:04:44 2014 - lock engine: pthread robust mutexes
+Fri May  2 11:04:44 2014 - uwsgi socket 0 bound to UNIX address /var/sockets/hosting_volant247/devel.volant247.sock fd 3
+Fri May  2 11:04:44 2014 - Python version: 2.7.3 (default, Mar 13 2014, 11:26:58)  [GCC 4.7.2]
+Fri May  2 11:04:44 2014 - Set PythonHome to /home/hosting_volant247/projects/devel/env
+Fri May  2 11:04:44 2014 - *** Python threads support is disabled. You can enable it with --enable-threads ***
+Fri May  2 11:04:44 2014 - Python main interpreter initialized at 0x1956a80
+Fri May  2 11:04:44 2014 - your server socket listen backlog is limited to 100 connections
+Fri May  2 11:04:44 2014 - mapped 144848 bytes (141 KB) for 1 cores
+Fri May  2 11:04:44 2014 - *** Operational MODE: single process ***
+Fri May  2 11:04:44 2014 - WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1956a80 pid: 10065 (default app)
+Fri May  2 11:04:44 2014 - *** uWSGI is running in multiple interpreter mode ***
+Fri May  2 11:04:44 2014 - spawned uWSGI master process (pid: 10065)
+Fri May  2 11:04:44 2014 - spawned uWSGI worker 1 (pid: 10073, cores: 1)
+[pid: 10073|app: 0|req: 1/1] 95.91.248.242 () {44 vars in 761 bytes} [Fri May  2 07:54:00 2014] GET / => generated 1757 bytes in 130 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
+[pid: 10073|app: 0|req: 2/2] 95.91.248.242 () {44 vars in 712 bytes} [Fri May  2 07:54:00 2014] GET /favicon.ico => generated 1937 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 10073|app: 0|req: 3/3] 95.91.248.242 () {46 vars in 792 bytes} [Fri May  2 14:18:52 2014] GET / => generated 1757 bytes in 1 msecs (HTTP/1.1 200) 2 headers in 73 bytes (1 switches on core 0)
