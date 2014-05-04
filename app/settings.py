@@ -36,6 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'haupt',	
 )
 
 MIDDLEWARE_CLASSES = (
@@ -64,6 +65,11 @@ DATABASES = {
 }
 
 
+#Templates
+
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'), 
+)
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
