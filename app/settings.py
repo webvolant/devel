@@ -1,3 +1,5 @@
+# ~*~ coding: utf-8 ~*~
+
 """
 Django settings for devel project.
 
@@ -30,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'localeurl',	    
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -44,11 +47,13 @@ INSTALLED_APPS = (
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'localeurl.middleware.LocaleURLMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 )
 
 ROOT_URLCONF = 'app.urls'
@@ -77,6 +82,13 @@ TEMPLATE_DIRS = (
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+    'django.core.context_processors.i18n',
+    'django.contrib.auth.context_processors.auth',
+)
+
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -86,6 +98,39 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+
+STATICFILES_DIRS = (
+
+    os.path.join(BASE_DIR, 'templates/css'),
+)
+
+STATICFILES_FINDERS = (
+
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+
+)
+
+
+
+LANGUAGES = (
+    ('ru', 'Russian'),
+    ('de', 'Deutsch'),
+    ('en', 'English'),
+)
+
+#MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
+#MODELTRANSLATION_TRANSLATION_REGISTRY = 'webvolant.translation'
+
+# включаем систему перевода django
+#USE_I18N = True
+
+# указываем, где лежат файлы перевода
+#LOCALE_PATHS = (
+#    os.path.join(PROJECT_ROOT, 'locale'),
+#)
 
 
 # Static files (CSS, JavaScript, Images)
