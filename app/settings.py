@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'haupt',
     'bootstrap3',
-    'south'
+    'south',
 		
 )
 
@@ -55,6 +55,8 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
 )
+
+LOCALEURL_USE_SESSION = True
 
 ROOT_URLCONF = 'app.urls'
 
@@ -137,3 +139,5 @@ LANGUAGES = (
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATIC_ROOT = 'static'
