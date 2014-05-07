@@ -75,7 +75,7 @@
 		        <div class="collapse navbar-collapse">
 		          <ul class="nav navbar-nav">
 		            <li><a {% ifequal request.path "/" %}class="active"{% endifequal %} href="/">Главная</a></li>
-					<li><a href="{% url 'orderform.views.order' %}">Связаться</a></li>
+					<li><a href="{% url "orderform.views.order" %}">Связаться</a></li>
 		          </ul>
 		        </div><!--/.nav-collapse -->
 		       
