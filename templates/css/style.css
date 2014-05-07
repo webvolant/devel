@@ -1,0 +1,39 @@
+.icon-menu{
+	
+	padding: 0px;
+	margin: 0px;
+}
+
+.icon-menu img{
+	width: 100px;
+	height: 100px;
+	border:1px solid gray;
+	background: orange;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.icon-menu:hover img{
+	filter: grayscale(50%);
+    -webkit-filter: grayscale(80%);
+    -moz-filter: grayscale(50%);
+    -ms-filter: grayscale(50%);
+    -o-filter: grayscale(50%); 
+}
+
+.icon-menu:hover img,.icon-menu:hover .backstyle{
+	border-radius: 5px 5px 5px 5px;
+	background: #f4f4f4;
+	transition: 1s;
+	padding: 0px;
+	margin: 0px;
+	
+
+}
+
+.icon-menu:not(:hover) img{
+	border-radius: 5px 5px 5px 5px;
+	background: orange;
+	transition: 1s;
+	padding: 0px;
+	margin: 0px;
+}

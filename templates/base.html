@@ -7,7 +7,7 @@
         {% load i18n %}
 	{% load localeurl_tags %} 
 
-        <title>{% block title %}{% endblock %} / Tr </title>
+        <title>{% block title %}{% endblock %} / Zweifach </title>
 
         {% load bootstrap3 %} 
 	{% bootstrap_css %}
@@ -31,7 +31,7 @@
 					</div>
 				</div>
 				<div class="col-sm-4 name">
-					<h1>TRANSLATE</h1>
+					<h1>ZWEIFACH</h1>
 				</div>
 				<div class="col-sm-4">
 					<div class="row">
@@ -75,22 +75,19 @@
 		        <div class="collapse navbar-collapse">
 		          <ul class="nav navbar-nav">
 		            <li><a {% ifequal request.path "/" %}class="active"{% endifequal %} href="/">Главная</a></li>
-					<li><a href=" url 'orderform.views.order' ">Связаться</a></li>
+					<li><a href="{% url 'orderform.views.order' %}">Связаться</a></li>
 		          </ul>
 		        </div><!--/.nav-collapse -->
 		       
 				
-				<form action="/search/" method="get">
-					<input class="inpseach" name="fsearch" type="text" placeholder="Search" />
-					<input class="seachbut" type="submit" value="Поиск" />
-				</form> 
+				
 		      </div>
 		    </div>
 		</div>
 
 		<div class="tr_head_bottom">
 			<div class="row">
-			    <div class="col-xs-4">.col-4</div>
+			    <div class="col-xs-4 icon-menu backclass"><img src="{% static "stamp.png" %}"/></div>
 			    <div class="col-xs-4">.col-4</div>
 			    <div class="col-xs-4">.col-4</div>
 			  	<hr>
@@ -130,3 +127,8 @@
 
 </body>
 </html>
+
+<form action="/search/" method="get">
+					<input class="inpseach" name="fsearch" type="text" placeholder="Search" />
+					<input class="seachbut" type="submit" value="Поиск" />
+				</form> 

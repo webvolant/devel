@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %} {{ detail.name }} {% endblock %} 
+
+
+{% block content %}
+
+<h1 class="page-header">
+	{{ detail.name }}
+</h1>
+{{ detail.text|safe }}
+
+{% endblock %}

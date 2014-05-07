@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'haupt',
     'bootstrap3',
     'south',
+    'orderform',
 		
 )
 
