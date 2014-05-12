@@ -269,13 +269,16 @@ body {
 </div>
 
 
-<div class="container-fixed">
+<div class="container">
 	<div class="row">
-		  <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
-		  <div class="col-xs-6 col-sm-6 col-md-4">.col-xs-6 .col-sm-6 .col-md-4</div>
-		<div class="col-md-6">
+		<div class="col-xs-3">
 		</div>
-		<div class="col-md-3">
+		<div class="col-xs-6">
+			{% bootstrap_messages %}
+
+    		{% block content %}Empty page{% endblock %}
+		</div>
+		<div class="col-xs-3">
 			<div id="outer_container">
 				<div id="thumbScroller">
 					<div class="container">
@@ -322,16 +325,11 @@ body {
 </div>
 
 
-<div class="container">
-	{% bootstrap_messages %}
-
-    {% block content %}Empty page{% endblock %}
-</div> <!-- container -->
 
 <div class="tr_footer_back">
 	<div class="container">
 		<div class="row">
-				<div class="col-sm-6">
+				<div class="col-xs-6">
 
 				</div>
 		</div>
@@ -393,7 +391,7 @@ body {
 </body>
 </html>
 
-<form action="/search/" method="get">
+<!--<form action="/search/" method="get">
 					<input class="inpseach" name="fsearch" type="text" placeholder="Search" />
 					<input class="seachbut" type="submit" value="Поиск" />
-				</form> 
+				</form> -->
