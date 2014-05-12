@@ -3,6 +3,7 @@
     <head>
         
         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         
         {% load i18n %}
 		{% load localeurl_tags %} 
@@ -16,6 +17,7 @@
 		{% load staticfiles %}
 		<link rel="icon" type="image/ico" href="{% static "favicon.ico" %}" />
 		<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+
 
 <style type="text/css">
 <!--
@@ -272,6 +274,14 @@ body {
 <div class="container">
 	<div class="row">
 		<div class="col-xs-3">
+			<div class="list-group">
+			  <a href="#" class="list-group-item">
+			    	Главная
+			  </a>
+			  <a href="#" class="list-group-item">Контакты</a>
+			  <a href="#" class="list-group-item">О нас</a>
+			  <a href="#" class="list-group-item">Услуги</a>
+			</div>
 		</div>
 		<div class="col-xs-6">
 			{% bootstrap_messages %}
