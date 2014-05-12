@@ -2,6 +2,17 @@
 
 {% block title %} {{ detail.name }} {% endblock %} 
 
+{% block breadcrumbs %}
+	
+	{% if request.path == "/en/" or request.path == "/ru/" or request.path == "/de/" %} 
+		<li class="active"> {{ detail.name }} </li> 
+	{% else %}
+		<li><a href="/">Главная</a></li>
+  
+		<li class="active"> {{ detail.name }} </li>
+	{% endif %} 
+  	
+{% endblock %}
 
 {% block content %}
 

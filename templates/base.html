@@ -104,10 +104,10 @@ body {
 .col-xs-4 {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #eee;
-  background-color: rgba(86,61,124,.15);
-  border: 1px solid #ddd;
-  border: 1px solid rgba(86,61,124,.2);
+  background-color: ;
+  
+  border: ;
+  
 }
 
 .container .navbar-header,
@@ -223,64 +223,55 @@ body {
 				</div>
 
 				<div class="col-xs-2">
-					{% for lang in LANGUAGES %}
-					    {% ifequal lang.0 LANGUAGE_CODE %}
-					        <li class="selected">{{ lang.1 }}</li>
-					    {% else %}
-					        <li><a href="{{ request.path|chlocale:lang.0 }}">{{ lang.1 }}</a></li>
-					    {% endifequal %}
-					{% endfor %}
+					
 				</div>
 
 			</div>
 
 		</div>
-		<div class="tr_head_menu">
-			<div class="navbar navbar-default">
-		      <div class="container">
-		        <div class="navbar-header">
-		          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		          </button>
-		          <a class="navbar-brand" href="#"></a>
-		        </div>
-		        <div class="collapse navbar-collapse">
-		          <ul class="nav navbar-nav">
-		            <li><a {% ifequal request.path "/" %}class="active"{% endifequal %} href="/">Главная</a></li>
-					<li><a href="{% url "orderform.views.order" %}">Связаться</a></li>
-		          </ul>
-		        </div><!--/.nav-collapse -->
-		       
-				
-				
-		      </div>
-		    </div>
-		</div>
+		
 
-		<div class="tr_head_bottom">
+		<!--<div class="tr_head_bottom">
 			<div class="row">
 			    <div class="col-xs-4 icon-menu backclass"><img src="{% static "stamp.png" %}"/></div>
 			    <div class="col-xs-4">.col-4</div>
 			    <div class="col-xs-4">.col-4</div>
 			  	<hr>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 
+<div class="container">
+	<div class="row">
+		
+	</div>
+</div>
 
 <div class="container">
 	<div class="row">
-		<div class="col-xs-3">
+		<div class="col-xs-4">
+			<ol class="breadcrumb">
+			  {% block breadcrumbs %}Home{% endblock %}
+			</ol>
+			<ul class="nav nav-pills">
+
+			{% for lang in LANGUAGES %}
+					    {% ifequal lang.0 LANGUAGE_CODE %}
+					        <li class="active"><a href="">{{ lang.1 }}</a></li>
+					    {% else %}
+					        <li><a href="{{ request.path|chlocale:lang.0 }}" >{{ lang.1 }}</a></li>
+					    {% endifequal %}
+					{% endfor %}
+ 
+			</ul>
 			<div class="list-group">
-			  <a href="#" class="list-group-item">
+			  <a {% ifequal request.path "/" %}class="active"{% endifequal %} href="/" class="list-group-item">
 			    	Главная
 			  </a>
-			  <a href="#" class="list-group-item">Контакты</a>
-			  <a href="#" class="list-group-item">О нас</a>
-			  <a href="#" class="list-group-item">Услуги</a>
+			  <a href="{% url "orderform.views.order" %}" class="list-group-item">Сделать заявку</a>
+			  <a href="{% url "haupt.views.site" 'about' %}"  class="list-group-item">О нас</a>
+			  <a href="{% url "haupt.views.site" 'service' %}" class="list-group-item">Услуги</a>
 			</div>
 		</div>
 		<div class="col-xs-6">
@@ -288,7 +279,7 @@ body {
 
     		{% block content %}Empty page{% endblock %}
 		</div>
-		<div class="col-xs-3">
+		<div class="col-xs-2">
 			<div id="outer_container">
 				<div id="thumbScroller">
 					<div class="container">

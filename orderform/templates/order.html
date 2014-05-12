@@ -5,6 +5,18 @@
 
 {% load bootstrap3 %}
 
+{% block breadcrumbs %}
+	
+	{% if request.path == "/en/" or request.path == "/ru/" or request.path == "/de/" %} 
+		<li class="active"> {{ detail.name }} </li> 
+	{% else %}
+		<li><a href="/">Главная</a></li>
+  
+		<li class="active"> Оставить заявку </li>
+	{% endif %} 
+  	
+{% endblock %}
+
 
 {% block title %}Контакты{% endblock title %}
 {% block content %}

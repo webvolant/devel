@@ -10,7 +10,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'haupt.views.index', name='index'),
+    url(r'^$', 'haupt.views.site', {'alias': 'main'}),
     url(r'^order/', include('orderform.urls')),
     url(r'^haupt/', include('haupt.urls')),
     url(r'^admin/', include(admin.site.urls)),
