@@ -5,18 +5,190 @@
         <meta charset="utf-8" />
         
         {% load i18n %}
-	{% load localeurl_tags %} 
+		{% load localeurl_tags %} 
 
         <title>{% block title %}{% endblock %} / Zweifach </title>
 
         {% load bootstrap3 %} 
-	{% bootstrap_css %}
-	{% bootstrap_javascript %}
+		{% bootstrap_css %}
+		{% bootstrap_javascript %}
 
-	{% load staticfiles %}
+		{% load staticfiles %}
 		<link rel="icon" type="image/ico" href="{% static "favicon.ico" %}" />
 		<link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
 
+<style type="text/css">
+<!--
+a{ color:#FFCC00}
+#outer_container{margin:60px; width:240px; padding:0 10px; border-top:1px solid #666; border-bottom:1px solid #666;}
+#thumbScroller{position:relative; height:600px; overflow:hidden;}
+#thumbScroller .container{position:relative; top:0;}
+#thumbScroller .content{clear:both;}
+#thumbScroller .content div{padding:10px 5px; height:100%; font-family:Verdana, Geneva, sans-serif; font-size:13px;}
+#thumbScroller img{border:5px solid #fff;}
+/* навигация по демкам */
+.more {
+    clear: both;
+    position: relative;
+}
+ol, ul {
+    list-style: none outside none;
+}
+.more ul {
+    text-align: center;
+}
+.more ul li {
+    display: inline;
+    line-height: 30px;
+    padding: 2px;
+}
+.more ul li.selected a, .more ul li.selected a:hover {
+    background: repeat #690322;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+.more ul li a {
+    background: repeat #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+    color: #333333;
+    padding: 3px 6px;
+    text-shadow: 1px 1px 1px #FFFFFF;
+    white-space: nowrap;
+	text-decoration:none;
+	
+}
+.more ul li a:hover {
+    background: repeat #8F0630;
+    color: #FFFFFF;
+    text-shadow: none;
+}
+-->
+
+/* Template-specific stuff
+ *
+ * Customizations just for the template; these are not necessary for anything
+ * with disabling the responsiveness.
+ */
+
+/* Account for fixed navbar */
+body {
+  min-width: 970px;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+/* Finesse the page header spacing */
+.page-header {
+  margin-bottom: 30px;
+}
+.page-header .lead {
+  margin-bottom: 10px;
+}
+
+
+/* Non-responsive overrides
+ *
+ * Utilitze the following CSS to disable the responsive-ness of the container,
+ * grid system, and navbar.
+ */
+
+/* Reset the container */
+.container {
+  width: 970px;
+  max-width: none !important;
+}
+
+/* Demonstrate the grids */
+.col-xs-4 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+.container .navbar-header,
+.container .navbar-collapse {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+/* Always float the navbar header */
+.navbar-header {
+  float: left;
+}
+
+/* Undo the collapsing navbar */
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+}
+
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+
+.navbar-brand {
+  margin-left: -15px;
+}
+
+/* Always apply the floated nav */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+.navbar-nav > li > a {
+  padding: 15px;
+}
+
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+  float: right;
+}
+
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important;
+}
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
+}
+
+
+
+</style>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     </head>
 <body>
 <div class="tr_back">
@@ -26,21 +198,21 @@
 
 
 			<div class="row">
-				<div class="col-sm-2">
+				<div class="col-xs-2">
 					<div class="logo">
 					</div>
 				</div>
-				<div class="col-sm-4 name">
+				<div class="col-xs-4 name">
 					<h1>ZWEIFACH</h1>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-xs-4">
 					<div class="row">
 						<a href="#" class="btn btn-success btn-large">{% bootstrap_icon "star-empty" %} Заказать перевод</a>
 					</div>
 					<div class="row">
-						<div class="col-sm-6 phone">
+						<div class="col-xs-6 phone">
 						</div>
-						<div class="col-sm-6 number">
+						<div class="col-xs-6 number">
 						{% block contacts %} 
 							<p><span>+49 (176) </span>36494787 <br/></p>
 						{% endblock %}
@@ -48,7 +220,7 @@
 					</div>
 				</div>
 
-				<div class="col-sm-2">
+				<div class="col-xs-2">
 					{% for lang in LANGUAGES %}
 					    {% ifequal lang.0 LANGUAGE_CODE %}
 					        <li class="selected">{{ lang.1 }}</li>
@@ -99,9 +271,50 @@
 
 <div class="container-fixed">
 	<div class="row">
-		<div class="col-sm-9">
+		  <div class="col-xs-12 col-sm-6 col-md-8">.col-xs-12 .col-sm-6 .col-md-8</div>
+		  <div class="col-xs-6 col-sm-6 col-md-4">.col-xs-6 .col-sm-6 .col-md-4</div>
+		<div class="col-md-6">
 		</div>
-		<div class="col-sm-3">
+		<div class="col-md-3">
+			<div id="outer_container">
+				<div id="thumbScroller">
+					<div class="container">
+				    	<div class="content">
+				        	<div><a href="#"><img src="{% static "thumbs/thumb1.jpg" %}" title="Дорога" alt="Дорога" class="thumb" /></a></div>
+				        </div>
+				        <div class="content">
+				        	<div><a href="#"><img src="{% static "thumbs/thumb2.jpg" %}" title="Цветок" alt="Цветок" class="thumb" /></a></div>
+				        </div>
+				        <div class="content">
+				        	<div><a href="#"><img src="{% static "thumbs/thumb3.jpg" %}" title="Сумерки" alt="Сумерки" class="thumb" /></a></div>
+				        </div>
+				        <div class="content">
+				        	<div><a href="#"><img src="{% static "thumbs/thumb4.jpg" %}" title="Водопад" alt="Водопад" class="thumb" /></a></div>
+				        </div>
+				        <div class="content">
+				        	<div><a href="#"><img src="{% static "thumbs/thumb5.jpg" %}" title="Каньон" alt="Каньон" class="thumb" /></a></div>
+				        </div>
+				        <div class="content">
+				        	<div><a href="#"><img src="{% static "thumbs/thumb6.jpg" %}" title="Дорога" alt="Дорога" class="thumb" /></a></div>
+				        </div>
+				        <div class="content">
+				        	<div><a href="#"><img src="{% static "thumbs/thumb7.jpg" %}" title="Лес" alt="Лес" class="thumb" /></a></div>
+				        </div>
+				        <div class="content">
+				        	<div><a href="#"><img src="{% static "thumbs/thumb8.jpg" %}" title="Дом" alt="Дом" class="thumb" /></a></div>
+				        </div>
+				        <div class="content">
+				        	<div><a href="#"><img src="{% static "thumbs/thumb9.jpg" %}" title="Рай" alt="Рай" class="thumb" /></a></div>
+				        </div>
+				        <div class="content">
+				        	<div><a href="#"><img src="{% static "thumbs/thumb10.jpg" %}" title="Деревья" alt="Деревья" class="thumb" /></a></div>
+				        </div>
+				        <div class="content">
+				        	<div><a href="#"><img src="{% static "thumbs/thumb11.jpg" %}" title="Листья" alt="Листья" class="thumb" /></a></div>
+				        </div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -124,6 +337,58 @@
 		</div>
 	</div>
 </div>
+
+
+
+
+<script>
+	$outer_container=$("#outer_container");
+	$thumbScroller=$("#thumbScroller");
+	$thumbScroller_container=$("#thumbScroller .container");
+	$thumbScroller_content=$("#thumbScroller .content");
+	$thumbScroller_thumb=$("#thumbScroller .thumb");
+	
+	$(window).load(function() {
+		var sliderHeight=$thumbScroller.height();
+		var itemHeight=$thumbScroller_content.height();
+
+		$thumbScroller_content.each(function (i) {
+			totalContent=i*itemHeight;	
+		});
+
+		$thumbScroller.mousemove(function(e){
+	  		var mouseCoords=(e.pageY - this.offsetTop);
+	  		var mousePercentY=mouseCoords/sliderHeight;
+	  		var destY=-(((totalContent-(sliderHeight-itemHeight))-sliderHeight)*(mousePercentY));
+	  		var thePosA=mouseCoords-destY;
+	  		var thePosB=destY-mouseCoords;
+	  		if(mouseCoords>destY){
+		  		$thumbScroller_container.css("top",-thePosA);
+	  		}
+	  		if(mouseCoords<destY){
+		  		$thumbScroller_container.css("top",thePosB);
+	  		}
+		});
+
+		var fadeSpeed=250;
+
+		$thumbScroller_thumb.each(function () {
+			var $this=$(this);
+			$this.fadeTo(fadeSpeed, 0.4);
+		});
+
+		$thumbScroller_thumb.hover(
+			function(){ //mouse over
+				var $this=$(this);
+				$this.stop().fadeTo(fadeSpeed, 1);
+			},
+			function(){ //mouse out
+				var $this=$(this);
+				$this.stop().fadeTo(fadeSpeed, 0.4);
+			}
+		);
+	});
+</script>
 
 </body>
 </html>

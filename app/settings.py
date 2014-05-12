@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'bootstrap3',
     'south',
     'orderform',
+    
 		
 )
 
@@ -142,3 +143,17 @@ LANGUAGES = (
 STATIC_URL = '/static/'
 
 STATIC_ROOT = 'static'
+
+
+# эта переменная будет указывать на папку проекта
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(__file__))
+
+# путь до папки media, в общем случае она пуста в начале
+
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media')
+
+MEDIA_URL = '/media/'  # URL для медии в шаблонах
+
+
+
