@@ -9,6 +9,14 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'b52';
+	src:url('b52.ttf');
+	src:url('b52.ttf') format('ttf'),
+	font-weight: normal;
+	font-style: normal;
+}
+
 
 
 ul.class_language{
@@ -97,12 +105,14 @@ p.label_icon{
 span.zwei {
 	font-size: 70px;
 	color:white;
+	font-family: "b52";
 }
 
 span.fach {
 	font-size: 75px;
 	color:white;
 	font-weight: bold;
+	font-family: "b52";
 }
 
 .icon_menu img{
