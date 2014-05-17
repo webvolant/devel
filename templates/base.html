@@ -306,13 +306,14 @@ body {
 			<ol class="breadcrumb">
 			  {% block breadcrumbs %}Home{% endblock %}
 			</ol>
-			<ul class="nav nav-pills">
+			<ul class="nav2 nav-pills2 class_language">
 
 			{% for lang in LANGUAGES %}
 					    {% ifequal lang.0 LANGUAGE_CODE %}
-					        <li class="active"><a href="">{{ lang.1 }}</a></li>
+					        	<li class="class_{{ lang.0 }}"><a href=""><img src="{% static lang.0 %}.png"/><!--{{ lang.0 }}--></a></li>
 					    {% else %}
-					        <li><a href="{{ request.path|chlocale:lang.0 }}" >{{ lang.1 }}</a></li>
+					        	<li class="class_{{ lang.0 }}"><a href="{{ request.path|chlocale:lang.0 }}" ><img src="{% static lang.0 %}.png"/><!--{{ lang.0 }}--></a></a></li>
+					        
 					    {% endifequal %}
 					{% endfor %}
  
