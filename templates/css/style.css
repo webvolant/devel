@@ -18,10 +18,32 @@
 }
 
 
+.cent{
+
+}
+
+.mtitle{
+	font-size: 15px;
+	width: 100%;
+	text-align:center;
+	border-radius:5px 5px 0px 0px;
+	color: #fff;
+	background-color: #428bca;
+	border-color: #357ebd;
+	padding:6px;
+}
+
+.moduls{
+	border:1px solid #f4f4f4;
+	padding: 0px;
+	width: 106%;
+	border-radius:5px 5px 5px 5px;
+}
 
 ul.class_language{
 	display: inline-flex;
 	padding:0px;
+	list-style: none;
 }
 
 ul.class_language li {
@@ -43,7 +65,7 @@ ul.class_language img{
 .contenttt {
 	border: 1px solid #f4f4f4;
 	margin-top: 5px;
-	border-radius:5px 5px 5px 5px;
+	border-radius:5px 5px 0px 0px;
 	padding:5px;
 }
 
@@ -508,7 +530,7 @@ span.r2014{
         }
         #v1, #v2
         {
-            margin: 20px;
+            margin-left: 40px;
         }
         .visible
         {
