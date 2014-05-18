@@ -76,6 +76,12 @@ p.label_icon{
 	top:-20px;
 }
 
+.pos7{
+	position: relative;
+	top:-30px;
+}
+
+
 .pimg1{
 	position: relative;
 	top:6px;
@@ -102,10 +108,27 @@ p.label_icon{
 	top:5px;
 }
 
+.pimg7{
+	position: relative;
+	top:5px;
+}
+
+div.logo img{
+	width: 140px;
+	height: 140px;
+	position: relative;
+	top: 10px;
+}
+
+div.name{
+	position: relative;
+	top:-5px;
+}
 span.zwei {
 	font-size: 70px;
 	color:white;
 	font-family: "b52";
+	letter-spacing: 24px;
 }
 
 span.fach {
@@ -113,6 +136,20 @@ span.fach {
 	color:white;
 	font-weight: bold;
 	font-family: "b52";
+	letter-spacing: 24px;
+}
+
+span.slogan{
+	font-size: 15px;
+	color:white;
+	position: relative;
+	top:-25px;
+	letter-spacing: 5px;
+}
+
+.menu_position{
+	position: relative;
+	top:-13px;
 }
 
 .icon_menu img{
@@ -174,6 +211,27 @@ span.fach {
 }
 
 */
+.tr_footer_back{
+	background: url("handmadepaper.png");
+}
+
+.logo68 img{
+	width: 70px;
+	height: 70px;
+	position: relative;
+	top: 25px;
+	left: 10px;
+	}
+.reserved{
+	color: gray;
+}
+
+span.r2014{
+	font-size: 10px;
+	position:relative;
+	top:10px;
+
+}
 
 *, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
@@ -393,3 +451,88 @@ span.fach {
 }
 
 
+
+
+#demo-left
+        {
+            width: 15%;
+            float: left;
+        }
+        #demo-right
+        {
+            width: 85%;
+            float: left;
+        }
+        #hWrapperAuto
+        {
+            margin-top: 20px;
+        }
+        #demo-tabs
+        {
+            width: 100%;
+            height: 50px;
+            color: White;
+            margin: 0;
+            padding: 0;
+        }
+        #demo-tabs div.item
+        {
+            height: 35px;
+            float: left;
+            background-color: #2F2F2F;
+            border: solid 1px gray;
+            border-bottom: none;
+            padding: 0;
+            margin: 0;
+            margin-left: 10px;
+            text-align: center;
+            padding: 10px 4px 4px 4px;
+            font-weight: bold;
+        }
+        #contents
+        {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            color: White;
+            font: arial;
+            font-size: 11pt;
+        }
+        #demo-tabs div.item.active-tab
+        {
+            background-color: Black;
+        }
+        #demo-tabs div.item.active-tabc
+        {
+            background-color: Black;
+        }
+        #v1, #v2
+        {
+            margin: 20px;
+        }
+        .visible
+        {
+            display: block;
+        }
+        .hidden
+        {
+            display: none;
+        }
+        #oldWrapper
+        {
+            margin-left: 100px;
+        }
+        #contents a
+        {
+            color: yellow;
+        }
+        #contents a:hover
+        {
+            text-decoration: none;
+            color: Gray;
+        }
+        .heading
+        {
+            font-size: 20pt;
+            font-weight: bold;
+        }
