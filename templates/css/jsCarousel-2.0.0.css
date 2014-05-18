@@ -65,9 +65,8 @@
 .jscarousal-vertical
 {
 	width: 140px;
-	height: 460px;
-	background-color: #121212;
-	border: solid 1px #7A7677;
+	height: 475px;
+	
 	margin: 0;
 	padding: 0;
 	position: relative;
@@ -76,7 +75,7 @@
 .jscarousal-vertical-back, .jscarousal-vertical-forward
 {
 	width: 100%;
-	height: 30px;
+	height: 35px;
 	background-color: #121212;
 	color: White;
 	position: relative;
@@ -88,12 +87,14 @@
 	background: url("top_arrow.jpg");
 	background-repeat: no-repeat;
 	background-position: bottom;
+	background-size: 35px
 }
 .jscarousal-vertical-forward
 {
 	background: url("bottom_arrow.jpg");
 	background-repeat: no-repeat;
 	background-position: top;
+	background-size: 35px
 }
 .jscarousal-contents-vertical
 {
